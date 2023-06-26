@@ -1,13 +1,14 @@
-import type { App, Plugin } from 'vue';
+import type { App } from 'vue'
+import components from './components'
 
-import { ButtonPlugin } from './Button';
+export * from './components'
 
-const DesignSystem: Plugin = {
-  install(app: App) {
-    ButtonPlugin.install?.(app);
-  },
-};
+const install = function (app: App) {
+  components.forEach((component) => {
+    app.use(component as unknown as { install: () => any })
+  })
+}
 
-export default DesignSystem;
-
-export * from './Button';
+export default {
+  install
+}

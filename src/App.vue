@@ -1,10 +1,11 @@
-<script setup lang="ts">
-</script>
-
 <template>
   <div class="title">Design system</div>
-  <Button>asd</Button>
+  <Button size="large" color="secondary" variant="outlined">asd</Button>
 </template>
+
+<script lang="ts" setup>
+import { Button } from '../packages'
+</script>
 
 <style scoped lang="scss">
 .title {

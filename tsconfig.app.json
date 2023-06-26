@@ -6,7 +6,9 @@
     "composite": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
-    }
+      "@/*": ["./src/*"],
+      "vue": ["node_modules/vue"]
+    },
+    "types": ["vite/client"]
   }
 }
